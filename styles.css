@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italianno&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+html { 
+    height: 100% 
+}
+
 body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
 }
 
 nav {
@@ -65,8 +71,9 @@ nav {
     font-family: 'Italianno';
     margin: 1rem;
     font-size: 3.5rem;
-    width: 10rem;
+    width: 12rem;
     color: white;
+    letter-spacing: 0.3rem;
 }
 
 .center-text button {
@@ -105,37 +112,116 @@ nav {
     border-radius: 5px;
 }
 
+.images img:hover {
+    transform: scale(1.06, 1.02);
+    border-radius: 0;
+    box-shadow: rgb(38, 57, 77) 0px 25px 30px -10px;
+}
+
 h3 {
     font-family: 'Bebas Neue';
     border: 1px solid black;
-    width: 340px;
+    width: 93%;
     background-color: black;
     text-align: center;
     margin: 0;
     margin-left: 1rem;
     color: white;
     font-size: 24px;
+    letter-spacing: 0.5rem;
+}
+
+.images h3:hover {
+    transform: scale(1, 1.35);
+    border-radius: 0;
+    background-color: rgb(43, 39, 39);
+    color: white;
+    border: none;
 }
 
 footer {
     background-color: rgb(43, 41, 41);
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
-    font-size: large;
-    height: 100px;
+    height: auto;
     margin-top: 4rem;
 }
 
-@media (max-width: 769px){
-    .images {
-        width: 600px;
-        height: 500px;
-        margin-left: 2rem;
-    }
+.contact-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.contact-content h2 {
+    margin-left: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto';
+}
+
+#email {
+    border: none;
+    border-radius: 0.5rem;
+    width: 20rem;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+#feedback {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0.5rem;
+    font-family: 'Roboto';
+    height: 6rem;
+}
+
+#send {
+    width: 7rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: bolder;
+    margin-left: 7rem;
+    background-color: white;
+    font-size: 17px;
+}
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+    font-family: 'Roboto';
+}
+
+.right i {
+    border: 1px solid #000000;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    margin-left: 0.7rem;
+    line-height: 3 !important;
+    box-shadow: white;
+    box-shadow: rgb(255, 255, 255) 0px 5px 30px -10px;
+}
+
+.copyright {
+    font-family: 'Roboto';
+    font-size: 24px;
+    margin-top: 1rem;
+    padding: 0.2rem;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+@media (max-width: 769px){
     .nav-links {
         display: none;
     }
@@ -156,5 +242,9 @@ footer {
         display: flex;
         justify-content: center;
         align-items:center;
+    }
+
+    form {
+        width: 60%;
     }
 }
