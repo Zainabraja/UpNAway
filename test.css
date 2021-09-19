@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box1, .box2, .box3 {
+    width: 30%;
+    height: 600px;
+    background-color: coral;
+    margin: 1em auto;
+}
+
+.box1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.innerbox1 {
+    width: 42.5%;
+    /* padding: 1em; */
+    height: calc(600px - 250px -3em);
+    margin: 1em;
+    background-color: turquoise;
+}
+
+.box2 {
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+
+.innerbox2 {
+    width: 100%;
+    /* padding: 1em; */
+    height: calc(600px - 250px -3em);
+    margin: 1em;
+    background-color: turquoise;
+}
+
+.box3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.innerbox3top, .innerbox3bottom {
+    width: 60%;
+    height: 250px;
+    margin: 1em;
+    background-color: turquoise;
+}
+
+.innerbox3top {
+    background-image: url('images/Parasailing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: 80%;
+}
+
+label {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 1em;
+}
+
+input {
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+button {
+    border: none;
+    background-color: black;
+    padding: 1em;
+    color: white;
+    margin: 1em;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .box1, .box2, .box3 {
+        width: 80%;
+        margin: 1em auto;
+    }
+}
